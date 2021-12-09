@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js"></script>
+    <title>Contacto</title>
+</head>
+<body id="body" onload="generateCaptcha()">
+    <header>
+        <div class="burguer">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+    </header>
+    <nav class="menu__side" id="menu_side">
+        <div class="name__page">
+            <a href="index.html"><img src="./img/icono.png" alt="logo"></a>
+        </div>
+        <div class="options__menu " >
+            <a href="index.html">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4 class="option_h4">Inicio</h4>
+                </div>
+            </a>
+            <a href="acceso.html">
+                <div class="option selected">
+                    <i class="fas fa-file-contract" title="Registro"></i>
+                    <h4 class="option_h4">Iniciar sesión</h4>
+                </div>
+            </a>
+            <a href="listado.html">
+                <div class="option">
+                    <i class="fas fa-shopping-cart" title="Productos"></i>
+                    <h4 class="option_h4">Productos</h4>
+                </div>
+            </a>
+            <a href="">
+                <div class="option">
+                    <i class="fas fa-barcode" title="Info producto"></i>
+                    <h4 class="option_h4">Vista</h4>
+                </div>
+            </a>
+            <a href="contacto.html">
+                <div class="option selected">
+                    <i class="fab fa-wpforms" title="Contacto"></i>
+                    <h4 class="option_h4">Contacto</h4>
+                </div>
+            </a>
+          
+        </div>
+    </nav>
+    <main>
+        <form action="" class="form" id="form">
+            <h4>Formulario de contacto</h4>
+            <div class="form__field" id="field__firstname">
+                <label for="firstname" class="form__label">Nombre</label>
+                <input type="text" name="firstname" id="firstname" tabindex="1" autofocus class="form__input" placeholder="María" onfocusout="validateFirstName()">
+                <p class="msg"></p>
+                
+            </div>
+
+            <div class="form__field" id="field__surname">
+                <label for="surname" class="form__label">Apellidos</label>
+                <input type="text" name="surname" id="surname" tabindex="2" class="form__input" placeholder="Fernández Sánchez" onfocusout="validateSurname()">
+                <p class="msg"></p>
+                
+            </div>
+
+            <div class="form__field" id="field__email">
+                <label for="email" class="form__label">E-mail</label>
+                <input type="text" name="email" id="email" tabindex="3" class="form__input" placeholder="mi_correo@ejemplo.es" onfocusout="validateEmail()">
+                <p class="msg"></p>
+                
+            </div>
+            <div class="form__field" id="field__msg">
+                <textarea name="textarea" id="textareabox" rows="10" cols="50" placeholder="Mensaje" onfocusout="isMessage()"></textarea>
+                <p class="msg"></p>
+            </div>
+
+        
+            <div class="form__field form__field-btn">
+                <button  type="submit" class="form__btn" id="form-contact__btn"> Enviar mensaje</button>
+                <p id="msg_end"></p>
+            </div>
+        </form>
+        <br><br>
+        <div class="captcha"> 
+            <h3>Captcha</h3>
+            <input type="text" id="captcha" disabled><br/><br/>
+            <input type="text" id="inputText" placeholder="Resultado en cifras"><br/><br/>
+            <button onclick="check()">Aceptar</button>
+        </div>
+    </main>
+    <script defer src="./js/contacto.js"></script>
+    <script defer src="./js/general.js"></script>
+</body>
+</html>
