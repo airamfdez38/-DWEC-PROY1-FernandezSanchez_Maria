@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .carousel {
+            position: relative;
+            margin:auto;
+            width: 390px;
+            padding: 10px 40px;
+            border: 1px solid #CCC;
+            border-radius: 15px;
+            background: #eee;
+            
+        }
+
+        .carousel h2{
+            text-align: center;
+            font-size: 28px;
+        }
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+        
+       
+    </style>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js"></script>
-    <title>Listado</title>
+    <title>Inicio</title>
 </head>
 <body id="body">
     <header>
@@ -20,7 +43,7 @@
         </div>
         <div class="options__menu " >
             <a href="index.html">
-                <div class="option">
+                <div class="option selected">
                     <i class="fas fa-home" title="Inicio"></i>
                     <h4 class="option_h4">Inicio</h4>
                 </div>
@@ -31,8 +54,8 @@
                     <h4 class="option_h4">Iniciar sesión</h4>
                 </div>
             </a>
-            <a href="listado.html">
-                <div class="option selected">
+            <a href="">
+                <div class="option">
                     <i class="fas fa-shopping-cart" title="Productos"></i>
                     <h4 class="option_h4">Productos</h4>
                 </div>
@@ -43,31 +66,14 @@
                     <h4 class="option_h4">Vista</h4>
                 </div>
             </a>
-            <a href="contacto.html">
+            <a href="contacto.html ">
                 <div class="option">
                     <i class="fab fa-wpforms" title="Contacto"></i>
                     <h4 class="option_h4">Contacto</h4>
                 </div>
             </a>
-          
+            
         </div>
     </nav>
-
-    <main id="main">
-        <div class="header_img">
-            <img src="./img/productos_cabecera.webp" alt="cabecera página" style="width: 1260px;">
-        </div>
-
-        <h2 id="listado_title" onmouseover="changeColor()" onmouseout="resetColor()">Productos</h2>
-
-        <div class="lista" id="lista">
-            <a href="hoodies.html" class="btnAgregar"><div class="product" id="hoodies"><p>Sudaderas</p></div></a>
-            <a href="t_shirts.html" class="btnAgregar"><div class="product" id="t_shirts"><p>Camisetas</p></div></a>
-            <a href="cups.html" class="btnAgregar"><div class="product" id="cups"><p>Tazas</p></div></a>
-        </div>
-
-
-    </main>
-    <script defer src="./js/general.js"></script>
-    <script defer src="./js/listado_2.js"></script>
 </body>
+</html>

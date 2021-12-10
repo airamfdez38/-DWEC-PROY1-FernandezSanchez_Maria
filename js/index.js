@@ -13,7 +13,17 @@ window.addEventListener('load', (e) => {
  */
 let index = 0;
 
-function carousel() {
+let carousel = document.getElementById('carousel');
+
+carousel.childNodes.forEach((elemento) =>{
+    elemento.addEventListener('load',(e) =>{
+        e.preventDefault();
+        slider()
+    })
+})
+
+
+function slider() {
     
     const img = document.getElementsByClassName("images");
 
@@ -25,6 +35,6 @@ function carousel() {
         index = 1;
     }    
     img[index - 1].style.display = "block";  
-    setTimeout(carousel, 3000);
+    setTimeout(slider, 3000);
 }
 

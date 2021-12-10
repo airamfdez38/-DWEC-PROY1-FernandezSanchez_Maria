@@ -22,13 +22,17 @@ form.addEventListener('submit',(e) =>{
 	if(validateFirstName()&&
 		validateSurname()&&
 		validateEmail()&&
-        isMessage()){
-		msg_end.style.color = 'green';
+        isMessage()&&
+		check()){
 		msg_end.innerHTML = "Gracias por contactar con nosotros";
+		msg_end.style.color ="green";
 		form.reset();
 	}else{
-		msg.innerHTML = "Rellene todos los campos correctamente";
-		msg.style.color = 'red';
+		generateCaptcha();
+		document.getElementById("inputText").value = "";
+		msg_end.innerHTML = "Rellene todos los campos correctamente";
+		msg_end.style.color= "red";
+		
 	}	
 });
 
@@ -176,9 +180,7 @@ function check(){
 let input = document.getElementById("inputText").value;
  
     if(input == (a + b)){
-    alert("Captcha aceptado");
+		return true;
     }
-    else{
-    alert("Intentar de nuevo");
-    }
+   
 }

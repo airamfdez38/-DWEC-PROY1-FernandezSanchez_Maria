@@ -21,14 +21,17 @@ form.addEventListener('submit',(e) =>{
 	e.preventDefault();
 
 	if(validateFirstName()&&
-		validatePassword()){
+		validatePassword()&&
+		check()){
         msg_end.innerHTML = "Sesión iniciada";
         msg_end.style.color = "green";
 		form.reset();
 	}else{
-        msg_end.innerHTML ="Rellene todos los campos";
-        
-       
+		generateCaptcha();
+		document.getElementById("inputText").value = "";
+        msg_end.innerHTML ="Rellene todos los campos correctamente";
+		msg_end.style.color="red";
+
     }	
 });
 
@@ -121,9 +124,7 @@ function check(){
 let input = document.getElementById("inputText").value;
  
     if(input == (a + b)){
-    alert("Captcha aceptado");
+    	return true;
     }
-    else{
-    alert("Intentar de nuevo");
-    }
+    
 }

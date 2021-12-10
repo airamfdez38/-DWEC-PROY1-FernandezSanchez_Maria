@@ -142,10 +142,11 @@ a.selected{
 
 
 .product{
-    width: 400px;
+    width: 350px;
+    height: 350px;
     margin-top: 50px;
-    margin-left: 50px;
-    display: flex;
+    margin-left: 40px;
+    display: inline-flex;
     align-items: center;
 }
 
@@ -154,36 +155,23 @@ a.selected{
     transition: all 0.4s;
 }
 
-.prod_text{
-    padding-left: 20px;
-}
 
-.prod_col{
-    padding: 30px;
-}
-
-#listado_title{
+#hoodies{
+    background-image: url(../img/sudaderas_prog.png);
+    background-repeat: no-repeat;
     
-    margin: auto;
-    padding: 50px;
-    font-size: 36px;
-    font-weight: bold;
-    color: green;
-}
-.prod_col{
-    border: 3px solid black;
-    width: 350px;
-}
-#prod_table td {
-    width: 150px;
-    white-space: nowrap;
-    text-align: center;
-    vertical-align: bottom;
-    padding-top: 5px;
-    padding-bottom: 12px;
 }
 
-.newStyle {
-    background: red;
+#t_shirts{
+    background-image: url(../img/camisetas_prog.png);
+    background-repeat: no-repeat;
 }
+
+#cups{
+    background-image: url(../img/tazas_prog.png);
+    background-repeat: no-repeat;
+}
+
+
+
 

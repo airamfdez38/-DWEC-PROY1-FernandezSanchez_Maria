@@ -76,23 +76,23 @@
                 
             </div>
             <div class="form__field" id="field__msg">
-                <textarea name="textarea" id="textareabox" rows="10" cols="50" placeholder="Mensaje" onfocusout="isMessage()"></textarea>
+                <textarea name="textarea" id="textareabox" tabindex="4" rows="10" cols="50" placeholder="Mensaje" onfocusout="isMessage()"></textarea>
                 <p class="msg"></p>
             </div>
-
+            <div class="captcha"> 
+                <h3>Captcha</h3>
+                <input type="text" id="captcha" disabled><br/><br/>
+                <input type="text" id="inputText" tabindex="5" placeholder="Resultado en cifras"><br/><br/>
+                
+            </div>
         
             <div class="form__field form__field-btn">
-                <button  type="submit" class="form__btn" id="form-contact__btn"> Enviar mensaje</button>
+                <button  type="submit" class="form__btn" id="form-contact__btn" tabindex="6"> Enviar mensaje</button>
                 <p id="msg_end"></p>
             </div>
         </form>
         <br><br>
-        <div class="captcha"> 
-            <h3>Captcha</h3>
-            <input type="text" id="captcha" disabled><br/><br/>
-            <input type="text" id="inputText" placeholder="Resultado en cifras"><br/><br/>
-            <button onclick="check()">Aceptar</button>
-        </div>
+       
     </main>
     <script defer src="./js/contacto.js"></script>
     <script defer src="./js/general.js"></script>

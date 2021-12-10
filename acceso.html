@@ -70,17 +70,19 @@
                 <p class="msg"></p>
                 
             </div>  
-            <button type="submit" id="btn_login" id="btn_login">Ingresar</button><br>
+
+            <div class="captcha"> 
+                <h3>Captcha</h3>
+                <input type="text" id="captcha" disabled><br/><br/>
+                <input type="text" id="inputText" tabindex="6" placeholder="Resultado en cifras"><br/><br/>
+              
+            </div><br>
+            <button type="submit" id="btn_login" id="btn_login" tabindex="8">Ingresar</button><br>
             <p id="msg_end" style="font-weight: bold;"></p>
 
         </form>
         <br><br>
-        <div class="captcha"> 
-            <h3>Captcha</h3>
-            <input type="text" id="captcha" disabled><br/><br/>
-            <input type="text" id="inputText" placeholder="Resultado en cifras"><br/><br/>
-            <button onclick="check()">Aceptar</button>
-        </div>
+       
 
         <p>¿No tienes cuenta?<a href="./registro.html">Regístrate</a></p>
         

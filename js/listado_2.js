@@ -2,7 +2,6 @@
 
 let title = document.getElementById('listado_title');
 
-
 /**
  * Función que al pasar el ratón por encima del título cambia el color del texto
  * @param -
@@ -26,8 +25,14 @@ function resetColor(){
 
 // Delegación de eventos
 
+let lista = document.getElementById('lista');
+let btnAgregar = document.getElementById('btnAgregar');
 
-
+lista.childNodes.forEach((elemento) => {
+    elemento.addEventListener('click', (e) =>{
+        console.log(e.target);
+    });
+});
 
 
 
