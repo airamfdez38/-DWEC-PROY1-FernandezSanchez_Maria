@@ -158,3 +158,32 @@ a.selected{
     padding-left: 20px;
 }
 
+.prod_col{
+    padding: 30px;
+}
+
+#listado_title{
+    
+    margin: auto;
+    padding: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    color: green;
+}
+.prod_col{
+    border: 3px solid black;
+    width: 350px;
+}
+#prod_table td {
+    width: 150px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+.newStyle {
+    background: red;
+}
+

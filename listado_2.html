@@ -55,23 +55,25 @@
 
     <main id="main">
         <div class="header_img">
-            <img src="./img/productos_cabecera.webp" alt="cabecera página" style="width: 1360px;">
+            <img src="./img/productos_cabecera.webp" alt="cabecera página" style="width: 1260px;">
         </div>
 
-        <table class="prod_table">
+        <h2 id="listado_title" onmouseover="changeColor()" onmouseout="resetColor()">Productos</h2>
+
+        <table id="prod_table" >
             <tr>
-                <td class="prod_col">
-                    <div class="hoodie" >
+                <td class="prod_hoodie prod_col">
+                    <div id="hoodie" >
                         <img src="./img/sudaderas_prog.png" alt="Sudaderas">
                     </div>
                 </td>
-                <td class="prod_table">
-                    <div class="t_shirt">
+                <td class="prod_tShirt prod_col">
+                    <div id="t_shirt">
                         <img src="./img/camisetas_prog.png" alt="Camisetas">
                     </div>
                 </td>
-                <td class="prod_col">
-                    <div class="cup">
+                <td class="prod_cup prod_col">
+                    <div id="cup">
                         <img src="./img/tazas_prog.png" alt="Tazas">
                     </div>
                 </td>
@@ -84,4 +86,5 @@
 
     </main>
     <script defer src="./js/general.js"></script>
+    <script defer src="./js/listado_2.js"></script>
 </body>
