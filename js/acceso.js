@@ -1,4 +1,4 @@
-
+'use strict';
 //Declaración de variables 
 
 let form       = document.getElementById('form');
@@ -115,7 +115,6 @@ function generateCaptcha() {
 /**
  * Función para comprobar Captcha
  * @param -
- * @returns alert tanto en caso de que sea correcto como no el valor introducido en el input
  * @author María Fernández
  * @date 2021/12/05
  */

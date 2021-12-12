@@ -1,5 +1,7 @@
+'use strict';
 
 //Declaramos variables
+
 let menu = document.getElementById("menu_side");
 let btn_open = document.getElementById("btn_open");
 let body = document.getElementById("body");

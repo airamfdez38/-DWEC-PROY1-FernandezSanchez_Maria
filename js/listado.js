@@ -1,33 +1,43 @@
+'use strict';
 
-let products = document.querySelectorAll('.product');
+// Declaración de variables
 
+let title = document.getElementById('listado_title');
 
-for(let i = 0; i < products.length; i++){
-
-    products[i].insertAdjacentHTML("afterbegin", '<i class="fas fa-trash-alt"></i>'); //Incluir icono por cada producto.
-    products[i].firstChild.onclick = () => products[i].remove();//Eliminar producto al hacer click sobre el icono.
-}
 
 /**
- * Función para aumentar el tamaño de la imagen al pasar el ratón sobre ella
- * @param -elem (imagen por la que se pasa el ratón)
- * @author María Fernández 
- * @date 2021/12/08
+ * Función que al pasar el ratón por encima del título cambia el color del texto
+ * @param -
+ * @author María Fernández
+ * @date 2021/12/09
  */
-function makeBig(elem) {
-    elem.style.width = "150%";
-    elem.style.height = "150%";
+
+function changeColor(){
+    title.style.color = 'red';
 }
 
 /**
-* Función para devolver la imagen a su tamañoo inicial al pasar el ratón sobre la misma
-* @param -elem (imagen por la que se pasa el ratón)
-* @author María Fernández 
-* @date 2021/12/08
-*/
-  
-function resize(elem) {
-    elem.style.width = "100%";
-    elem.style.height = "100%";
-    
+ * Función que al sacar el ratón del título devuelve el texto a su color original
+ * @param -
+ * @author María Fernández
+ * @date 2021/12/09
+ */
+function resetColor(){
+    title.style.color = 'green';
 }
+
+// Delegación de eventos
+
+let lista = document.getElementById('lista');
+let btnAgregar = document.getElementById('btnAgregar');
+
+lista.childNodes.forEach((elemento) => {
+    elemento.addEventListener('click', (e) =>{
+        console.log(e.target);
+    });
+});
+
+
+
+
+

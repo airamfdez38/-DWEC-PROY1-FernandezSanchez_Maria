@@ -1,3 +1,4 @@
+'use strict';
 
 //Declaración de variables
 
@@ -31,13 +32,16 @@ form.addEventListener('submit',(e) =>{
 		validateEmail()&&
 		validateBirth()&&
 		validatePassword()&&
-		matchPasswords()){
+		matchPasswords()&&
+		check()){
 		msg_end.style.color = 'green';
 		msg_end.innerHTML = "Bienvenido!! Ya está registrado";
 		form.reset();
 	}else{
-		msg.innerHTML = "Rellene todos los campos correctamente";
-		msg.style.color = 'red';
+		generateCaptcha();
+		document.getElementById("inputText").value = "";
+		msg_end.innerHTML = "Rellene todos los campos correctamente";
+		msg_end.style.color = 'red';
 	}	
 });
 
@@ -211,35 +215,33 @@ function matchPasswords(){
  * @author María Fernández
  * @date 2021/12/05
  */
-let captcha;
-let a;
-let b;
+ let captcha;
+ let a;
+ let b;
+  
+ function generateCaptcha() {
+	  a = Math.floor((Math.random() * 10));
+	  b = Math.floor((Math.random() * 10));
+  
+	 captcha = `${a} + ${b}`;
+	 document.getElementById("captcha").value = captcha;
+ }
  
-function generateCaptcha() {
-     a = Math.floor((Math.random() * 10));
-     b = Math.floor((Math.random() * 10));
- 
-    captcha = `${a} + ${b}`;
-    document.getElementById("captcha").value = captcha;
-}
- 
-/**
- * Función para comprobar Captcha
- * @param -
- * @returns alert tanto en caso de que sea correcto como no el valor introducido en el input
- * @author María Fernández
- * @date 2021/12/05
- */
-function check(){
-let input = document.getElementById("inputText").value;
- 
-    if(input == (a + b)){
-    alert("Captcha aceptado");
-    }
-    else{
-    alert("Intentar de nuevo");
-    }
-}
+ /**
+  * Función para comprobar Captcha
+  * @param -
+  * @author María Fernández
+  * @date 2021/12/05
+  */
+  
+ function check(){
+ let input = document.getElementById("inputText").value;
+  
+	 if(input == (a + b)){
+		 return true;
+	 }
+	 
+ }
 
 
 

@@ -13,10 +13,14 @@
         <div class="burguer">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        <div class="shop">
+            <a href="cesta.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
     </header>
     <nav class="menu__side" id="menu_side">
         <div class="name__page">
-            <a href="index.html"><img src="./img/icono.png" alt="logo"></a>
+            <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
+
         </div>
         <div class="options__menu " >
             <a href="index.html">
@@ -37,10 +41,10 @@
                     <h4 class="option_h4">Productos</h4>
                 </div>
             </a>
-            <a href="">
+            <a href="hoodies.html">
                 <div class="option">
                     <i class="fas fa-barcode" title="Info producto"></i>
-                    <h4 class="option_h4">Vista</h4>
+                    <h4 class="option_h4">Vista de producto</h4>
                 </div>
             </a>
             <a href="contacto.html">
@@ -76,11 +80,11 @@
                 
             </div>
             <div class="form__field" id="field__msg">
-                <textarea name="textarea" id="textareabox" tabindex="4" rows="10" cols="50" placeholder="Mensaje" onfocusout="isMessage()"></textarea>
+                <textarea name="textarea" id="textareabox" tabindex="4" rows="10" cols="35" placeholder="Mensaje" onfocusout="isMessage()"></textarea>
                 <p class="msg"></p>
             </div>
             <div class="captcha"> 
-                <h3>Captcha</h3>
+                <h3>Captcha</h3><br>
                 <input type="text" id="captcha" disabled><br/><br/>
                 <input type="text" id="inputText" tabindex="5" placeholder="Resultado en cifras"><br/><br/>
                 
@@ -94,6 +98,9 @@
         <br><br>
        
     </main>
+    <footer>
+        <p class="p_footer">María Fernández Sánchez</p>
+    </footer>
     <script defer src="./js/contacto.js"></script>
     <script defer src="./js/general.js"></script>
 </body>

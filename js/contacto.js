@@ -1,3 +1,5 @@
+'use strict';
+
 // Declaración de variables
 
 let form       = document.getElementById("form");

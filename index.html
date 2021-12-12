@@ -5,29 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        .carousel {
-            position: relative;
-            margin:auto;
-            width: 390px;
-            padding: 10px 40px;
-            border: 1px solid #CCC;
-            border-radius: 15px;
-            background: #eee;
-            
-        }
-
-        .carousel h2{
-            text-align: center;
-            font-size: 28px;
-        }
-        .carousel img {
-            width: 100%;
-            display: block;
-        }
-        
-       
-    </style>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js"></script>
     <title>Inicio</title>
 </head>
@@ -36,10 +13,13 @@
         <div class="burguer">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        <div class="shop">
+            <a href="cesta.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
     </header>
     <nav class="menu__side" id="menu_side">
         <div class="name__page">
-            <a href="index.html"><img src="./img/icono.png" alt="logo"></a>
+            <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
         </div>
         <div class="options__menu " >
             <a href="index.html">
@@ -54,16 +34,16 @@
                     <h4 class="option_h4">Iniciar sesión</h4>
                 </div>
             </a>
-            <a href="">
+            <a href="listado.html">
                 <div class="option">
                     <i class="fas fa-shopping-cart" title="Productos"></i>
                     <h4 class="option_h4">Productos</h4>
                 </div>
             </a>
-            <a href="">
+            <a href="hoodies.html">
                 <div class="option">
                     <i class="fas fa-barcode" title="Info producto"></i>
-                    <h4 class="option_h4">Vista</h4>
+                    <h4 class="option_h4">Vista de producto</h4>
                 </div>
             </a>
             <a href="contacto.html ">
@@ -78,22 +58,12 @@
     <main>
         <div id="carousel">
 
-
-            <div class="images" >
-                <img src="img/realista1.png" width="100%"/>
-            </div>
-            
-            <div class="images">
-                <img src="img/realista2.png" width="100%"/>
-            </div>
-            
-            <div class="images">
-                <img src="img/renacentista1.png" width="100%"/>
-            </div>
-            
         </div>
     </main>
-    <script defer src="./js/index.js"></script>
+    <footer>
+        <p class="p_footer">María Fernández Sánchez</p>
+    </footer>
+    <script defer src="./js/script.js"></script>
     <script defer src="./js/general.js"></script>
 </body>
 </html>

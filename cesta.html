@@ -13,10 +13,14 @@
         <div class="burguer">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        <div class="shop">
+            <a href="cesta.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
     </header>
     <nav class="menu__side" id="menu_side">
         <div class="name__page">
-            <a href="index.html"><img src="./img/icono.png" alt="logo"></a>
+            <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
+
         </div>
         <div class="options__menu " >
             <a href="index.html">
@@ -37,10 +41,10 @@
                     <h4 class="option_h4">Productos</h4>
                 </div>
             </a>
-            <a href="">
+            <a href="hoodies.html">
                 <div class="option">
                     <i class="fas fa-barcode" title="Info producto"></i>
-                    <h4 class="option_h4">Vista</h4>
+                    <h4 class="option_h4">Vista de producto</h4>
                 </div>
             </a>
             <a href="contacto.html">
@@ -52,22 +56,29 @@
           
         </div>
     </nav>
-
-    <main id="main">
-        <div class="header_img">
-            <img src="./img/productos_cabecera.webp" alt="cabecera página" style="width: 1260px;">
+    <main>
+        <h3>Mi cesta</h3>
+    
+        <div class="product">
+            <img src="./img/slider_camiseta.png" class="img" onmouseenter="makeBig(this)" onmouseleave="resize(this)">
+            
         </div>
-
-        <h2 id="listado_title" onmouseover="changeColor()" onmouseout="resetColor()">Productos</h2>
-
-        <div class="lista" id="lista">
-            <a href="hoodies.html" class="btnAgregar"><div class="product" id="hoodies"><p>Sudaderas</p></div></a>
-            <a href="t_shirts.html" class="btnAgregar"><div class="product" id="t_shirts"><p>Camisetas</p></div></a>
-            <a href="cups.html" class="btnAgregar"><div class="product" id="cups"><p>Tazas</p></div></a>
+        <div class="product">
+            <img src="./img/slider_cup_2.png" class="img" onmouseenter="makeBig(this)" onmouseleave="resize(this)">
+            
         </div>
-
-
+        <div class="product">
+            <img src="./img/slider_taza.png" class="img" onmouseenter="makeBig(this)" onmouseleave="resize(this)">
+           
+        </div>
+       
+    
+            
     </main>
-    <script defer src="./js/general.js"></script>
-    <script defer src="./js/listado_2.js"></script>
+    <footer>
+        <p class="p_footer">María Fernández Sánchez</p>
+    </footer>
+    <script src="./js/general.js"></script>
+    <script src="./js/cesta.js"></script>
 </body>
+<footer></footer>

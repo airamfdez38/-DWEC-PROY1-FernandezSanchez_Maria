@@ -14,10 +14,14 @@
         <div class="burguer">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        <div class="shop">
+            <a href="cesta.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
     </header>
     <nav class="menu__side" id="menu_side">
         <div class="name__page">
-            <a href="index.html"><img src="./img/icono.png" alt="logo"></a>
+            <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
+
         </div>
         <div class="options__menu " >
             <a href="index.html">
@@ -38,10 +42,10 @@
                     <h4 class="option_h4">Productos</h4>
                 </div>
             </a>
-            <a href="">
+            <a href="hoodies.html">
                 <div class="option">
                     <i class="fas fa-barcode" title="Info producto"></i>
-                    <h4 class="option_h4">Vista</h4>
+                    <h4 class="option_h4">Vista de producto</h4>
                 </div>
             </a>
             <a href="contacto.html">
@@ -99,20 +103,21 @@
                 <p class="msg"></p>
                 
             </div>
-
-            <div class="form__field form__field-btn">
-                <button type="submit" class="form__btn" id="form__btn" tabindex="7">Enviar</button>
-                <p id="msg_end" style="font-weight: bold;"></p>
+            <div class="captcha"> 
+                <h3>Captcha</h3>
+                <input type="text" id="captcha" disabled><br/><br/>
+                <input type="text" id="inputText" tabindex="7" placeholder="Resultado en cifras"><br/><br/>
+                <button onclick="check()" tabindex="8">Enviar</button>
             </div>
+
+    
         </form><br>
         <br><br>
-        <div class="captcha"> 
-            <h3>Captcha</h3>
-            <input type="text" id="captcha" disabled><br/><br/>
-            <input type="text" id="inputText" placeholder="Resultado en cifras"><br/><br/>
-            <button onclick="check()">Aceptar</button>
-        </div>
+        
     </main>
+    <footer>
+        <p class="p_footer">María Fernández Sánchez</p>
+    </footer>
     <script defer src="./js/registro.js"></script>
     <script defer src="./js/general.js"></script>
 </body>
