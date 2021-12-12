@@ -176,11 +176,26 @@ img{
     
 }
 
+.product p{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin:120px 100px;
+
+    
+}
+
 .img{
     padding: 0px 30px;
     width: 120px;
     height: 100px;
     transition: all 0.4s;
+}
+
+#listado_title{
+    margin: 30px 530px;
+    font-size: 38px;
+   
 }
 
 /********** listado.html ********/
