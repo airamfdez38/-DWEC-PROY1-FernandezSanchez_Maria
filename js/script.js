@@ -25,7 +25,7 @@ function startCarousel(){
     if(actual_img >= images.length){
         actual_img = 0;
     }
-    document.querySelector('#carousel').innerHTML =`<img src = "img/slider_${images[actual_img]}.png" id="sliderContent>`;
+    document.querySelector('#carousel').innerHTML =`<img src = "img/slider_${images[actual_img]}.png" id="sliderContent">`;
     document.getElementById('carousel').style.display = 'flex';
     document.getElementById('carousel').style.justifyContent = 'center';
 
