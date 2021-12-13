@@ -166,6 +166,11 @@ img{
     transition: all 0.5ms;
 }
 
+#sliderContent{
+    width: 450px;
+    height: 450px;
+}
+
 /********** cesta.htmL *********/
 .product{
     width: 300px;

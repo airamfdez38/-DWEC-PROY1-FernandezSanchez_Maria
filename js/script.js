@@ -9,7 +9,7 @@ let actual_img = -1;
 
 window.addEventListener('load', (e) => {
     
-    setInterval(startCarousel, 3000);
+    setInterval(startCarousel, 2000);
 });
 
 /**
