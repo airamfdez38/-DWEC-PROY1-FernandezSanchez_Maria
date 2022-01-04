@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js"></script>
-    <title>Listado</title>
+    <title>API</title>
 </head>
 <body id="body">
     <header>
+        
         <div class="burguer">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
@@ -18,8 +21,8 @@
         </div>
     </header>
     <nav class="menu__side" id="menu_side">
-        <div class="name__page"> 
-           <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
+        <div class="name__page">
+            <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
 
         </div>
         <div class="options__menu " >
@@ -30,13 +33,13 @@
                 </div>
             </a>
             <a href="acceso.html">
-                <div class="option">
+                <div class="option ">
                     <i class="fas fa-file-contract" title="Registro"></i>
                     <h4 class="option_h4">Iniciar sesión</h4>
                 </div>
             </a>
             <a href="listado.html">
-                <div class="option selected">
+                <div class="option">
                     <i class="fas fa-shopping-cart" title="Productos"></i>
                     <h4 class="option_h4">Productos</h4>
                 </div>
@@ -47,41 +50,60 @@
                     <h4 class="option_h4">Vista de producto</h4>
                 </div>
             </a>
-            <a href="contacto.html">
+            <a href="contacto.html ">
                 <div class="option">
                     <i class="fab fa-wpforms" title="Contacto"></i>
                     <h4 class="option_h4">Contacto</h4>
                 </div>
             </a>
             <a href="API.html">
-                <div class="option">
+                <div class="option selected">
                     <i class="fab fa-wpforms" title="API"></i>
                     <h4 class="option_h4">API</h4>
                 </div>
             </a>
-          
+
+            
         </div>
     </nav>
 
-    <main id="main">
-        <div class="header_img">
-            <img src="./img/productos_cabecera.webp" alt="cabecera página" style="width: 1260px;" >
-        </div>
+    <body>
+        <h2 style="margin-left: 150px; margin-top: 150px;">Listado de usuarios</h2>
+       <div class="container">
+           <table class="table table-stripped">
+               <thead>
+                   <tr>
+                       <th>Nombre</th>
+                       <th>Apellidos</th>
+                       <th>Email</th>
+                       <th>Teléfono</th>
+                       <th>DNI</th>
+                   </tr>
+               </thead>
+               <tbody id="data">
 
-        <h2 id="listado_title" onmouseover="changeColor()" onmouseout="resetColor()">Productos</h2>
+               </tbody>
+           </table>
+       </div>
+       <h2 style="margin-left: 150px;">Listado de productos</h2>
+       <div class="container">
+           <table class="table table-stripped">
+               <thead>
+                   <tr>
+                       <th>Categoria</th>
+                       <th>Modelo</th>
+                       <th>Precio</th>
+                       <th>Unidades en stock</th>
+                   </tr>
+               </thead>
+               <tbody id="dataProduct">
 
-        <div class="lista" id="lista">
-            <a href="hoodies.html" class="btnAgregar"><div class="product" id="hoodies" ><p>Sudaderas</p></div></a>
-            <a href="t_shirts.html" class="btnAgregar"><div class="product" id="t_shirts" ><p>Camisetas</p></div></a>
-            <a href="cups.html" class="btnAgregar"><div class="product" id="cups" ><p>Tazas</p></div></a>
-        </div>
 
-        
-    </main>
-    
-    <footer>
-        <p class="p_footer">María Fernández Sánchez</p>
-    </footer>
-    <script defer src="./js/general.js"></script>
-    <script defer src="./js/listado.js"></script>
-</body>
+               </tbody>
+           </table>
+       </div>
+
+       <script src="./js/api.js"></script>
+       
+    </body>
+</html>
