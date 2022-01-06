@@ -2,7 +2,7 @@
 
 //Declaración de variables
 
-let images = ["sudaderas","camiseta","taza"];
+let images = ["hoodie_1","camiseta","cup"];
 let actual_img = -1;
 
 //Lamada al evento desde el objeto window

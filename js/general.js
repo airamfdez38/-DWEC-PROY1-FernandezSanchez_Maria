@@ -25,6 +25,8 @@ btn_open.addEventListener("click", (e)=>{
 function open_close(){
     body.classList.toggle("resize_menu");
     menu.classList.toggle("resized_menu");
+
+
        
 }
 

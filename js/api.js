@@ -1,4 +1,4 @@
-//Obtención de datos de los usuarios 
+//Obtención de datos de los usuarios con fetch
 
 fetch('http://localhost:3000/user').then(
     res=>{
@@ -7,6 +7,7 @@ fetch('http://localhost:3000/user').then(
                 console.log(data);
                 if(data.length > 0){
                     let temp = "";
+                    // Pintar los datos en la tabla
                     
                      data.forEach((u) => {
                          temp += "<tr>";
@@ -26,26 +27,44 @@ fetch('http://localhost:3000/user').then(
     }
 )
 
-//Obtención información de los productos
+//Obtención información de los productos con XMLHttpRequest
 
-const API_URL= 'http://localhost:3000/product';
-const xhr =  new XMLHttpRequest();
+if(window.Promise) {
 
-function onRequestHandler(){
-    if( this.readyState === 4 && this.status === 200){
-    
-        const data = JSON.parse(this.response);
-        console.log(data);
+    var promise = new Promise(function(resolve, reject) { // Objeto Promise
 
-        const HTMLResponse = document.querySelector('#dataProduct');
-        const tpl = data.map((product) => `<tr><td>${product.name}</td><td> ${product.description_short}</td> <td>${product.price}€</td><td>${product.stock}</td></tr>`);
-        HTMLResponse.innerHTML = `${tpl}`;
-    }
+    const xhr = new XMLHttpRequest(); // Objeto XMLHttpRequest
+    xhr.open('GET', 'http://localhost:3000/product');
+    xhr.onload = function() {
+      if (this.status == 200 && this.readyState === 4)  {
+          resolve(xhr.response);
+          const data = JSON.parse(this.response);
+          console.log(data);
+            //Pintar el listado en el HTML
+          const HTMLResponse = document.querySelector('#dataProduct');
+          const tpl = data.map((product) => `<tr><td>${product.name}</td><td> ${product.description_short}</td> <td>${product.price}€</td><td>${product.stock}</td></tr>`);
+          HTMLResponse.innerHTML = `${tpl}`;
+      } else {
+          reject(Error(xhr.statusText));
+      }
+    };
+    xhr.onerror = function() {
+        reject(Error('Algo no ha salido bien!!!'));
+    };
+    xhr.send();
+  });
+
 }
 
-xhr.addEventListener('load', onRequestHandler);
-xhr.open('GET',`${API_URL}`);
-xhr.send();
+ //Tercera llamada
+
+ fetch('http://localhost:3000/product/14590eda-55bf-45fa-b8cd-c7aadd20ab5a')
+        .then(res=>res.json())
+        .then(json=>console.log(json));
+      
+        
+
+
 
 
 
