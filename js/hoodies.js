@@ -12,15 +12,15 @@ window.addEventListener('DOMContentLoaded', (e) =>{
   
 })
 
+
 /**
+ * NOTA: Esto no es una funcion recursiva
  * Función recursiva para pasar las imágenes cada 3 segundos
  * @param -
  * @returns
  * @author María Fernández 
  * @date 2021/12/10
  */
-
-
 function changeItem(){
     actual_hoodie++;
     if(actual_hoodie >= hoodies.length){

@@ -42,7 +42,7 @@ if(window.Promise) {
           console.log(data);
             //Pintar el listado en el HTML
           const HTMLResponse = document.querySelector('#dataProduct');
-          const tpl = data.map((product) => `<tr><td>${product.name}</td><td> ${product.description_short}</td> <td>${product.price}€</td><td>${product.stock}</td></tr>`);
+          const tpl = data.map((product) => `<tr><td><a href="./product.html?id=${product.uuid}"><img src="${product.img_featured}" width="80"/></a></td><td>${product.name}</td><td> ${product.description_short}</td> <td>${product.price}€</td><td>${product.stock}</td></tr>`);
           HTMLResponse.innerHTML = `${tpl}`;
       } else {
           reject(Error(xhr.statusText));

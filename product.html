@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js"></script>
+    <title></title>
+</head>
+<body id="body">
+    <header>
+        <div class="burguer">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+        <div class="shop">
+            <a href="cesta.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+    <nav class="menu__side" id="menu_side">
+        <div class="name__page">
+            <a href="index.html"><img src="./img/icono.png" alt="logo" class="icono"></a>
+
+        </div>
+        <div class="options__menu " >
+            <a href="index.html">
+                <div class="option selected">
+                    <i class="fas fa-home" title="Inicio"></i>
+                </div>
+            </a>
+            <a href="acceso.html">
+                <div class="option">
+                    <i class="fas fa-file-contract" title="Registro"></i>
+                </div>
+            </a>
+            <a href="listado.html">
+                <div class="option">
+                    <i class="fas fa-shopping-cart" title="Productos"></i>
+                </div>
+            </a>
+            <a href="hoodies.html">
+                <div class="option">
+                    <i class="fas fa-barcode" title="Info producto"></i>
+                </div>
+            </a>
+            <a href="contacto.html ">
+                <div class="option">
+                    <i class="fab fa-wpforms" title="Contacto"></i>
+                </div>
+            </a>
+            <a href="API.html">
+                <div class="option">
+                    <i class="fab fa-wpforms" title="API"></i>
+                </div>
+            </a>
+            
+        </div>
+    </nav>
+    <main>
+        <section class="container">
+            <div class="slider_h" style="width: 150px;">
+                <div id="slider_hoodies" class="container_hoodies">
+
+                </div>
+                
+            </div>
+            <div class="hoodie_info" style="width: 200px;">
+                <h2 id="title"></h2>
+                <p id="description"></p>
+                <p id="price"></p>
+                <p id="stock"></p>
+                <button class="sizes" id='more' onClick="more()">+</button>
+                <button class="sizes"  id="counter" >0</button>
+                <button class="sizes"  id='less' onClick="less()">-</button><br>
+
+                <button class="cesta" disabled>Añadir a la cesta</button>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="p_footer">María Fernández Sánchez</p>
+    </footer>
+    <script defer src="./js/general.js"></script>
+    <script  defer src="./js/product.js"></script>
+    
+</body>
+</html>
