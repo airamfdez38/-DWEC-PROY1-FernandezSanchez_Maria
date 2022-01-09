@@ -38,7 +38,7 @@ function loadProductById(id){
         const xhr = new XMLHttpRequest(); // Objeto XMLHttpRequest
         xhr.open('GET', `http://localhost:3000/product/${id}`);
         xhr.onload = function() {
-          if (this.status == 200 && this.readyState === 4)  {
+          if (this.status == 200 && this.readyState === 4)  {//Cuando la  promesa pasa a estado de resuelta
               resolve(xhr.response);
               const data = JSON.parse(this.response);
               console.log(data);
@@ -52,7 +52,7 @@ function loadProductById(id){
             document.querySelector('#stock').innerHTML = `${data.stock} uds.`;
               
           } else {
-              reject(Error(xhr.statusText));
+              reject(Error(xhr.statusText));//cuando la promesa está en estado de rechazada
           }
         };
         xhr.onerror = function() {
