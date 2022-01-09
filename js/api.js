@@ -56,13 +56,7 @@ if(window.Promise) {
 
 }
 
- //Tercera llamada
-
- fetch('http://localhost:3000/product/14590eda-55bf-45fa-b8cd-c7aadd20ab5a')
-        .then(res=>res.json())
-        .then(json=>console.log(json));
-      
-        
+ 
 
 
 
