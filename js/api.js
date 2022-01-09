@@ -34,10 +34,10 @@ if(window.Promise) {
     var promise = new Promise(function(resolve, reject) { // Objeto Promise
 
     const xhr = new XMLHttpRequest(); // Objeto XMLHttpRequest
-    xhr.open('GET', 'http://localhost:3000/product');
+    xhr.open('GET', 'http://localhost:3000/product'); 
     xhr.onload = function() {
       if (this.status == 200 && this.readyState === 4)  {
-          resolve(xhr.response);
+          resolve(xhr.response); //Cuando la  promesa pasa a estado de resuelta
           const data = JSON.parse(this.response);
           console.log(data);
             //Pintar el listado en el HTML
@@ -45,7 +45,7 @@ if(window.Promise) {
           const tpl = data.map((product) => `<tr><td><a href="./product.html?id=${product.uuid}"><img src="${product.img_featured}" width="80"/></a></td><td>${product.name}</td><td> ${product.description_short}</td> <td>${product.price}€</td><td>${product.stock}</td></tr>`);
           HTMLResponse.innerHTML = `${tpl}`;
       } else {
-          reject(Error(xhr.statusText));
+          reject(Error(xhr.statusText)); //cuando la promesa está en estado de rechazada
       }
     };
     xhr.onerror = function() {
@@ -56,7 +56,9 @@ if(window.Promise) {
 
 }
 
- 
+/* La tercera llamada  se realiza al clickar en cada uno de los productos que aparecen en el listado.
+*  El código de esta tercera llamada está en el archivo product.js
+*/
 
 
 
