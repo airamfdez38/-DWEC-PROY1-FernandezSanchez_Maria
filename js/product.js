@@ -5,11 +5,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-
+//Declaración de variables
 
 let stock;
 let valor = document.getElementById("counter").innerHTML
 
+/**
+ * Función para obtener el id de la url del producto
+ * @param -0
+ * @returns producto
+ * @author María Fernández
+ * @date 2022/01/07
+ */
 
 function getIdFromUrl(){
     const queryString = window.location.search;
@@ -17,6 +24,14 @@ function getIdFromUrl(){
     const product = urlParams.get('id')
     return product;
 }
+
+/**
+ * Función para cargar un producto por medio de su id
+ * @param -id
+ * @author María Fernández
+ * @date 2022/01/07
+ */
+
 function loadProductById(id){
    new Promise(function(resolve, reject) { // Objeto Promise
 
@@ -49,7 +64,7 @@ function loadProductById(id){
 
 /**
  * Función para aumentar o disminuir unidades de compra
- * @param -elem (referido a los botones + y -)
+ * @param -0
  * @author María Fernández
  * @date 2022/01/07
  */
