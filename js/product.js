@@ -46,6 +46,13 @@ function loadProductById(id){
         xhr.send();
 })
 }
+
+/**
+ * Función para aumentar o disminuir unidades de compra
+ * @param -elem (referido a los botones + y -)
+ * @author María Fernández
+ * @date 2022/01/07
+ */
 function more(){
     if(valor < stock ){
         valor++;
