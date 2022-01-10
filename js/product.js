@@ -36,7 +36,7 @@ function loadProductById(id){
    new Promise(function(resolve, reject) { // Objeto Promise
 
         const xhr = new XMLHttpRequest(); // Objeto XMLHttpRequest
-        xhr.open('GET', `http://localhost:3000/product/${id}`);
+        xhr.open('GET', `https://apiqr.happycoding.es/product/${id}`);
         xhr.onload = function() {
           if (this.status == 200 && this.readyState === 4)  {//Cuando la  promesa pasa a estado de resuelta
               resolve(xhr.response);

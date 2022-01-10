@@ -1,6 +1,6 @@
 //Obtención de datos de los usuarios con fetch
 
-fetch('http://localhost:3000/user').then(
+fetch('https://apiqr.happycoding.es/user').then(
     res=>{
         res.json().then(
             data=>{
@@ -34,7 +34,7 @@ if(window.Promise) {
     var promise = new Promise(function(resolve, reject) { // Objeto Promise
 
     const xhr = new XMLHttpRequest(); // Objeto XMLHttpRequest
-    xhr.open('GET', 'http://localhost:3000/product'); 
+    xhr.open('GET', 'https://apiqr.happycoding.es/product'); 
     xhr.onload = function() {
       if (this.status == 200 && this.readyState === 4)  {
           resolve(xhr.response); //Cuando la  promesa pasa a estado de resuelta
